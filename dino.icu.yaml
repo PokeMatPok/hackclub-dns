@@ -980,6 +980,11 @@ wowstar: # wowstar2504@proton.me
     type: CNAME
     value: cname.vercel-dns.com.
 
+inherit: # mtthsschrbr@proton.me
+  - ttl: 600
+    type: CNAME
+    value: cname.vercel-dns.com.
+
 write: # WriteFreely!
   ttl: 3600
   type: A
