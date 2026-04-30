@@ -553,34 +553,10 @@ icons: # yoda - https://github.com/yodalightsabr/icons-dino-icu - a CDN for @hac
   type: A
   value: 76.76.21.21
 
-#inherit entries (web, mail) ↓, contact at mtthsschrbr@proton.me or @mtthsschrbr on slack
-
-inherit:
+inherit: # contact at mtthsschrbr@proton.me or @mtthsschrbr on slack
   - ttl: 600
     type: CNAME
     value: cname.vercel-dns.com.
-
-resend._domainkey.inherit:
-  ttl: 3600
-  type: TXT
-  value: "p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDlFn8+Ep0RP8e791QcpRDe8I8vHHt378umytGa4/+UJAS+tfC8VeQqMohtrwzo3bW5emTeGqcsNrJKOE5FZW6zvam5xgtQ6WTZd/wwXXImVz403m1hpD84gYTZkeQ4zKojeMLz373og767Q7GxJSjCTH7IiPy+fRKotinpMn6FnwIDAQAB"
-
-send.inherit:
-  - ttl: 3600
-    type: MX
-    values:
-      - priority: 10
-        value: feedback-smtp.eu-west-1.amazonses.com.
-  - ttl: 3600
-    type: TXT
-    value: "v=spf1 include:amazonses.com ~all"
-
-_dmarc.inherit:
-  ttl: 3600
-  type: TXT
-  value: v=DMARC1\; p=none\;
-
-# end of inherit entries ↑
 
 innohacks: #efe
   ttl: 600
@@ -936,6 +912,16 @@ render: # samuelessemail@gmail.com -  Render
   type: A
   value: 216.198.79.1
 
+resend._domainkey.inherit: # contact at mtthsschrbr@proton.me or @mtthsschrbr on slack
+  ttl: 3600
+  type: TXT
+  value: "p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDlFn8+Ep0RP8e791QcpRDe8I8vHHt378umytGa4/+UJAS+tfC8VeQqMohtrwzo3bW5emTeGqcsNrJKOE5FZW6zvam5xgtQ6WTZd/wwXXImVz403m1hpD84gYTZkeQ4zKojeMLz373og767Q7GxJSjCTH7IiPy+fRKotinpMn6FnwIDAQAB"
+
+_dmarc.inherit: # contact at mtthsschrbr@proton.me or @mtthsschrbr on slack
+  ttl: 3600
+  type: TXT
+  value: v=DMARC1\; p=none\;
+
 respawn: # mustaafahany@gmail.com [U093H5LJHGC] | Respawn YSWS
   ttl: 600
   type: CNAME
@@ -1028,6 +1014,16 @@ sdheeraj: # https://github.com/17sdheeraj/17sdheeraj.github.io
   ttl: 600
   type: CNAME
   value: 17sdheeraj.github.io.
+
+send.inherit: # contact at mtthsschrbr@proton.me or @mtthsschrbr on slack
+  - ttl: 3600
+    type: MX
+    values:
+      - priority: 10
+        value: feedback-smtp.eu-west-1.amazonses.com.
+  - ttl: 3600
+    type: TXT
+    value: "v=spf1 include:amazonses.com ~all"
 
 sequoia: # vortex slave record - https://vortex.skyfall.dev
   ttl: 60
