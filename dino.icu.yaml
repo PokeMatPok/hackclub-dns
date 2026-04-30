@@ -578,7 +578,7 @@ send.inherit:
 _dmarc.inherit:
   ttl: 3600
   type: TXT
-  value: "v=DMARC1\; p=none\;"
+  value: 'v=DMARC1; p=none;'
 
 # end of inherit entries ↑
 
